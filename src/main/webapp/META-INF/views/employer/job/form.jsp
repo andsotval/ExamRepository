@@ -41,7 +41,7 @@
   		test="${command != 'create' and hasPublish}"
 		code="employer.job.form.button.duty" 
 		action="/employer/duty/list?id=${id}"/>
-	<acme:form-submit test="${command != 'create'}"
+	<acme:form-submit test="${command != 'create' and hasPublish}"
 		method="get"
 		code="employer.job.form.button.auditrecord" 
 		action="/employer/auditrecord/list-by-job?id=${id}"/>
