@@ -55,6 +55,7 @@ public class AuthenticatedAuditorrequestCreateService implements AbstractCreateS
 		if (isAccepted) {
 			isAccepted = ar.getStatus() != null ? ar.getStatus() : false;
 		}
+
 		boolean isPending = false;
 		if (hasRequest) {
 			isPending = ar.getStatus() == null;
