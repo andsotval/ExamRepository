@@ -46,8 +46,8 @@ public class PhoneFormatter implements Formatter<Phone> {
 		String areaCode, number;
 
 		countryCodeRegex = "\\+\\d{1,3}";
-		areaCodeRegex = "\\d{1,6}";
-		numberRegex = "\\d{1,9}([\\s-]\\d{1,9}){0,5}";
+		areaCodeRegex = "\\s?\\d{1,6}\\s?";
+		numberRegex = "\\s?\\d{1,9}([\\s-]\\d{1,9}){0,5}";
 		phoneRegex = String.format(//
 			"^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$",//
 			countryCodeRegex, //

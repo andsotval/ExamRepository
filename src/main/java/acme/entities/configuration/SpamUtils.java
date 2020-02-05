@@ -53,6 +53,8 @@ public class SpamUtils {
 	public void setSpam(final Spam entity) {
 		this.spam = entity;
 		SpamUtils.count = 0d;
-		SpamUtils.spamWords = Arrays.asList(this.spam.getWords().split(","));
+		if (this.spam.getWords() != ",") {
+			SpamUtils.spamWords = Arrays.asList(this.spam.getWords().split(","));
+		}
 	}
 }
